@@ -1,2 +1,2 @@
 # KPSSH 
-It enables users to use mutiple GitHub accounts within same PC using advanced security through SSH.
+It enables users to use mutiple GitHub accounts simultaneously within same PC using advanced security (ED25519) through SSH.
