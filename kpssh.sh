@@ -126,6 +126,10 @@ if [[ "$ADD_MODE" == "1" ]]; then
         brew install gh
       elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
         err "Please install GitHub CLI manually for your Linux distribution."
+      elif [[ "$OSTYPE" == "msys"* || "$OSTYPE" == "cygwin"* || "$OSTYPE" == "win32"* ]]; then
+        command -v winget >/dev/null || err "winget not found. Please install App Installer from Microsoft Store."
+        echo "Running: winget install GitHub.cli --silent"
+        winget install GitHub.cli
       else
         err "Unsupported OS for auto-install."
       fi
