@@ -129,7 +129,7 @@ if [[ "$ADD_MODE" == "1" ]]; then
       elif [[ "$OSTYPE" == "msys"* || "$OSTYPE" == "cygwin"* || "$OSTYPE" == "win32"* ]]; then
         command -v winget >/dev/null || err "winget not found. Please install App Installer from Microsoft Store."
         echo "Running: winget install GitHub.cli --silent"
-        winget install GitHub.cli
+        winget install GitHub.cli --silent
       else
         err "Unsupported OS for auto-install."
       fi
